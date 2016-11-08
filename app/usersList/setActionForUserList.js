@@ -4,7 +4,7 @@ define(function (require) {
     var setData = require('./../infoFullBlock/setDataInInfoField');
     usersData = JSON.parse(usersData);
     var declareAction = function (block) {
-        block.onclick = action
+        block.block.onclick = action
     }
     function action() {
         var target = document.getElementById('infoFullBlock')
@@ -12,7 +12,8 @@ define(function (require) {
             target.style.display = 'block'
         }
         var field = infoField.infoField;
-        var user =  usersData[this.id];
+        var user =  this.data;
+        console.log(this.data);
         setData.setDataInInfoField(user, field)
     }
 

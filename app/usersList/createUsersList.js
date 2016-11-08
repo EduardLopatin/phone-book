@@ -42,13 +42,17 @@ define(function (require) {
     function setId(newUser, usersData, user) {
         newUser.block.id = usersData.indexOf(user)
     }
+    function setAllDataInuserItem(item, data) {
+       item.block.data = data;
+    }
     var createUsersList = function (usersData) {
         createUserListField();
         var target = document.getElementById('userList');
         usersData.forEach(function (user) {
             var newUser =  createListItem(user, target);
             setId(newUser, usersData, user);
-            setActionForUserList.declareAction(newUser.block)
+            setAllDataInuserItem(newUser, user)
+            setActionForUserList.declareAction(newUser)
         })
     };
     return {
