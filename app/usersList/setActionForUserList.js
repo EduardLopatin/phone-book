@@ -13,7 +13,6 @@ define(function (require) {
         }
         var field = infoField.infoField;
         var user =  this.data;
-        console.log(this.data);
         setData.setDataInInfoField(user, field)
     }
 
