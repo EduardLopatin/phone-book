@@ -4,13 +4,12 @@ define(function (require) {
     var usersData = require('./../getData');
     usersData = JSON.parse(usersData);
     var setActionForUserList = require('./setActionForUserList');
-    createUserListField();
     function createUserListField() {
         var userListField = document.createElement('div');
-        userListField.style.width = '15vw';
-        userListField.style.float = 'left';
+        userListField.style.width = '20vw';
         userListField.id = 'userList';
-        document.body.appendChild(userListField);
+        var leftLayout = document.getElementById('leftLayout');
+        leftLayout.appendChild(userListField);
     }
     function createListItem(user, target) {
         var newUser = createDomElementsForUser();
@@ -44,6 +43,7 @@ define(function (require) {
         newUser.block.id = usersData.indexOf(user)
     }
     var createUsersList = function (usersData) {
+        createUserListField();
         var target = document.getElementById('userList');
         usersData.forEach(function (user) {
             var newUser =  createListItem(user, target);

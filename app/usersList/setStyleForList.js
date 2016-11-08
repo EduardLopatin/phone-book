@@ -9,21 +9,23 @@ define(function () {
         var element = user.avatar.style;
         element.width = '50px';
         element.height = '50px';
-        element.float = 'left'
+        element.float = 'left';
     }
     var setStyleForInfoField = function (user) {
         var element = user.infoField.style;
-        element.textAlign = 'right';
+        element.textAlign = 'left';
         element.padding = '6px';
-        setStyleForNameField(user)
+        setStyleForNameField(user);
         setStyleForJobField(user)
     }
     function setStyleForNameField(user) {
         var element = user.nameField.style;
+        element.textAlign = 'right'
         element.color = 'darkgreen'
     }
     function setStyleForJobField(user) {
         var element = user.jobField.style;
+        element.textAlign = 'right'
         element.fontSize = '12px'
     }
     return {

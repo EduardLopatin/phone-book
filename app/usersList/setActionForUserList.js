@@ -7,9 +7,12 @@ define(function (require) {
         block.onclick = action
     }
     function action() {
+        var target = document.getElementById('infoFullBlock')
+        if(target.style.display = 'none'){
+            target.style.display = 'block'
+        }
         var field = infoField.infoField;
         var user =  usersData[this.id];
-        console.log(user);
         setData.setDataInInfoField(user, field)
     }
 

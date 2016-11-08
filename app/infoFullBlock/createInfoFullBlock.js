@@ -23,11 +23,13 @@ define(function (require) {
     }
     function createInfoFullFieldLayout() {
         var field = document.createElement('div');
-        field.style.float = 'left'
-        field.style.padding = '10px'
+        field.style.float = 'left';
+        field.style.padding = '10px';
+        field.style.marginLeft = '10px';
         field.id = 'infoFullBlock';
         field.style.width = '30vw';
         field.style.backgroundColor = 'darkcyan';
+        field.style.display = 'none';
         document.body.appendChild(field);
     }
     function createFieldItems() {
